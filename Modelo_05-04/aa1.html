@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>EcoPontuação - Maringá</title>
+  <link rel="stylesheet" href="bb2.css">
+</head>
+<body>
+  <div class="container">
+
+    <h1>EcoPontuação 🌱</h1>
+
+    <!-- Login / Cadastro -->
+    <div id="auth-section">
+      <input type="text" id="username" placeholder="Digite seu nome">
+      <button onclick="login()">Entrar</button>
+    </div>
+
+    <!-- Dashboard do usuário -->
+    <div id="dashboard" style="display: none;">
+      <p>Bem-vindo, <span id="user-name"></span>!</p>
+      <p>Pontuação: <span id="user-points">0</span> pontos</p>
+
+      <!-- Leitor de QR Code -->
+      <div id="reader"></div>
+      <div id="result">Aguardando leitura...</div>
+
+      <button onclick="logout()">Sair</button>
+
+      <!-- Ranking -->
+      <h2>Ranking da Comunidade 🏆</h2>
+      <ul id="ranking-list"></ul>
+
+      <!-- Conteúdo Educativo -->
+      <h2>Educação Ambiental 📚</h2>
+      <p><a href="https://www.reciclagem.org" target="_blank">Clique aqui para aprender mais sobre reciclagem</a></p>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/html5-qrcode"></script>
+  <script src="cc3.js"></script>
+</body>
+</html>
