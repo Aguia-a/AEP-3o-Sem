@@ -20,37 +20,40 @@
         <div id="logo">
           <img id="logo-img" src="./assets/Logo.png" />
         </div>
-        <button onclick="logout()" class="btn" style="display: block">
+        <button id="logout-btn" onclick="logout()" class="btn" style="display: none">
           Sair
         </button>
       </div>
 
-      <form id="auth-section" style="display: none">
+      <div id="auth-section">
         <div id="login-section">
           <input id="username" placeholder="Digite seu nome" type="text" />
           <button class="btn" onclick="login()">Entrar</button>
         </div>
-      </form>
+      </div>
 
-      <div id="dashboard">
+      <div id="dashboard" style="display: none;">
         <div id="dashboard-area">
           <div id="welcome-section">
-            <p id="UserTitle-Name">
-              Bem Vindo(a), <span id="user-name"></span>!
-            </p>
-            <p id="UserTitle-Points">
-              Pontuação: <span id="user-points">0</span> pontos
-            </p>
-          </div>
+              <p id="UserTitle-Name">
+                Bem Vindo(a), <span id="user-name"></span>!
+              </p>
+              <p id="UserTitle-Points">
+                Pontuação: <span id="user-points">0</span> pontos
+              </p>
+            </div>
+          <div id="dashboard-wrapper">
+            <div class="dashboard-section">
+              <div id="reader-wrapper">
+                <div id="reader"></div>
+              </div>
+              <div id="result">Aguardando leitura...</div>
+            </div>
 
-          <div class="dashboard-section">
-            <div id="reader"></div>
-            <div id="result">Aguardando leitura...</div>
-          </div>
-
-          <div class="dashboard-section">
-            <h2 id="community-rank">🏆 Ranking da Comunidade 🏆</h2>
-            <ul id="ranking-list"></ul>
+            <div class="dashboard-section">
+              <h2 id="community-rank">🏆 Ranking da Comunidade 🏆</h2>
+              <ul id="ranking-list"></ul>
+            </div>
           </div>
         </div>
       </div>
@@ -65,6 +68,6 @@
     </div>
 
     <script src="https://unpkg.com/html5-qrcode"></script>
-    <script src="cc3.js"></script>
+    <script src="./script.js"></script>
   </body>
 </html>
