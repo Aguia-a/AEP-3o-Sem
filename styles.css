@@ -1,3 +1,4 @@
+/* Main Variables START */
 :root {
   --primary-green: #386641;
   --secondary-green: #6a994e;
@@ -6,9 +7,12 @@
   --primary-brown: #bc4749;
   --text-dark: #1e1e1e;
 }
+/* Main Variables START */
 
+/* Default Page Styling START */
 body {
   margin: 0;
+  box-sizing: content-box;
 
   background-color: var(--background-white);
 
@@ -20,10 +24,11 @@ body {
 }
 
 .content-wrapper {
+  display: flex;
+
   width: 100vw;
   height: 100vh;
 
-  display: flex;
   flex-direction: column;
 
   justify-content: space-between;
@@ -32,32 +37,19 @@ body {
 
 #header {
   display: flex;
-  flex-direction: row;
-
-  justify-content: space-evenly;
-  align-items: center;
-
-  margin-top: 25px;
 
   width: 100vw;
 }
 
-#logo {
-  width: 300px;
-  height: 60px;
-}
-
 #logo-img {
-  width: 100%;
+    width: 100%;
 
-  object-fit: cover;
+    object-fit: cover;
 }
 
 #login-section {
-  width: 671px;
-  height: 246px;
-
   display: flex;
+
   flex-direction: column;
 
   justify-content: space-evenly;
@@ -69,31 +61,17 @@ body {
   border: none;
 }
 
-.divisor {
-  width: 381px;
-  height: 0px;
-
-  border: 1px solid var(--text-dark);
-  opacity: 30%;
-
-  margin: -30px 0 -15px 0;
-}
-
 #username {
   border: none;
   background-color: transparent;
   color: var(--text-dark);
   opacity: 80%;
-  height: 62px;
 
   font-family: kodchasan, sans-serif;
-  font-size: 48px;
   font-weight: 400;
   text-align: center;
 
-  padding-bottom: 10px;
   border-bottom: 2px solid #1e1e1e55;
-  margin-bottom: -20px;
 }
 
 #username::placeholder {
@@ -106,14 +84,12 @@ body {
 }
 
 .btn {
-  width: 120px;
-  height: 40px;
+  padding: 1.2% 2%;
 
   border: none;
   border-radius: 15px;
 
   font-family: inherit;
-  font-size: 25px;
   font-weight: 600;
 
   background-color: var(--primary-green);
@@ -128,60 +104,47 @@ body {
 }
 
 .footer {
-  width: 100%;
-  height: 80px;
+  width: 100vw;
 
   display: flex;
+
   justify-content: center;
   align-items: center;
-
-  border-radius: 50px 50px 0 0;
 
   background-color: var(--primary-green);
 }
 
 a {
-  color: var(--background-white);
+    color: var(--background-white);
 }
 
 .footer > a {
-  font-size: 24px;
   font-weight: 100;
 }
 
 #dashboard-area {
-  width: 1000px;
-  height: 500px;
-
   display: flex;
+
   flex-direction: column;
 
   justify-content: space-evenly;
   align-items: center;
 
   background-color: var(--tertiary-green);
-
-  border-radius: 25px;
-
-  padding: 5px 70px 10px 70px;
 }
 
 #dashboard-wrapper {
-  width: 950px;
-  height: 400px;
+  width: 100%;
+  height: 100%;
 
   display: flex;
-  flex-direction: row;
-
-  justify-content: space-evenly;
-  align-items: center;
 }
 
 #welcome-section {
   width: 100%;
-  height: 93px;
 
   display: flex;
+
   flex-direction: column;
 
   justify-content: center;
@@ -194,42 +157,247 @@ a {
 }
 
 #UserTitle-Name {
-  font-size: 34px;
   margin: 0;
 
   border-bottom: 1px solid #1e1e1e55;
 }
 
 #UserTitle-Points {
-  font-size: 24px;
   opacity: 80%;
   margin: 0;
 }
 
 .dashboard-section {
-  width: 450px;
-  height: 380px;
+  background-color: var(--secondary-green);
+  color: var(--background-white);
+
+  border: none;
 
   display: flex;
   flex-direction: column;
 
   justify-content: space-evenly;
   align-items: center;
+}
 
-  background-color: var(--secondary-green);
-  color: var(--background-white);
+#ranking-header {
+    width: 90%;
+    height: 20%;
 
-  border-radius: 25px;
-  border: none;
+    margin-bottom: auto;
+}
+
+#ranking-body {
+  width: 90%;
+
+  margin: auto;
+
+  text-align: center;
 }
 
 #community-rank {
-    font-weight: 400;
-    text-align: center;
+  font-weight: 400;
+  text-align: center;
 }
 
 ul {
   list-style: none;
-  
+
   padding: 0;
 }
+/* Default Page Styling END */
+
+/* Desktop Styling START */
+@media only screen and (min-width: 951px) {
+  #header {
+    flex-direction: row;
+
+    justify-content: space-evenly;
+    align-items: center;
+
+    margin-top: 25px;
+  }
+
+  #logo {
+    width: 300px;
+    height: 60px;
+  }
+
+  #login-section {
+    width: 50vw;
+    height: 30vh;
+  }
+
+  #username {
+    height: 6vh;
+    max-width: 40vw;
+
+    font-size: 48px;
+
+    padding: 3% 0;
+  }
+
+  .btn {
+    font-size: 25px;
+  }
+
+  #enter {
+    margin-top: -3vh;
+  }
+
+  .footer {
+    height: 10vh;
+
+    border-radius: 50px 50px 0 0;
+  }
+
+  .footer > a {
+    font-size: 2vw;
+  }
+
+  #dashboard-area {
+    width: 75vw;
+    height: 65vh; 
+
+    border-radius: 25px;
+
+    padding: 5px 70px 10px 70px;
+  }
+
+  #dashboard-wrapper {
+    flex-direction: row;
+
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  #welcome-section {
+    height: 10vh;
+  }
+
+  #UserTitle-Name {
+    font-size: 3vw;
+  }
+
+  #UserTitle-Points {
+    font-size: 2vw;
+  }
+
+  .dashboard-section {
+    width: 45%;
+    height: 80%;
+
+    border-radius: 25px;
+  }
+
+  #ranking-body {
+    height: 70%;
+  }
+
+  #community-rank {
+    font-size: 2vw;
+  }
+}
+/* Desktop Styling END */
+
+/* Mobile Styling START */
+@media only screen and (max-width: 950px) {
+  #header {
+    width: 100vw;
+    height: 13vh;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    margin-top: 10%;
+  }
+
+  #logo {
+    width: 65vw;
+    height: 20vh;
+  }
+
+  #login-section {
+    width: 80vw;
+    height: 20vh;
+  }
+
+  #username {
+    height: 6vh;
+    max-width: 80%;
+    
+    font-size: 8vw;
+
+    padding: 3% 0;
+  }
+
+  .btn {
+    font-size: 5vw;
+
+    border-radius: 8px;
+
+    padding: 5px 10px;
+  }
+
+  .footer {
+    height: 12vh;
+
+    border-radius: 30px 30px 0 0;
+
+    padding: 1%;
+  }
+
+  .footer > a {
+    font-size: 4vw;
+    
+    text-align: center;
+  }
+
+  #dashboard-area {
+    margin-top: 30px;
+    margin-bottom: 20px;
+
+    width: 80vw;
+
+    border-radius: 15px;
+
+    padding: 6px 10px;
+  }
+
+  #dashboard-wrapper {
+    flex-direction: column;
+  }
+
+  #welcome-section {
+    height: 50px;
+
+    margin-top: 5px;
+  }
+
+  #UserTitle-Name {
+    font-size: 6vw;
+  }
+
+  #UserTitle-Points {
+    font-size: 4vw;
+  }
+
+  .dashboard-section {
+    width: 100%;
+    height: 300px;
+
+    border-radius: 15px;
+
+    margin: 10px 0;
+  }
+
+  #ranking-body {
+    height: 60%; 
+  }
+
+  #community-rank {
+    font-size: 5vw;
+  }
+}
+/* Mobile Styling END */
