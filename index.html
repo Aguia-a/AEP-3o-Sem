@@ -28,7 +28,7 @@
       <div id="auth-section">
         <div id="login-section">
           <input id="username" placeholder="Digite seu nome" type="text" />
-          <button class="btn" onclick="login()">Entrar</button>
+          <button id="enter" class="btn" onclick="login()">Entrar</button>
         </div>
       </div>
 
@@ -51,8 +51,12 @@
             </div>
 
             <div class="dashboard-section">
-              <h2 id="community-rank">🏆 Ranking da Comunidade 🏆</h2>
-              <ul id="ranking-list"></ul>
+              <div id="ranking-header">
+                <h2 id="community-rank">🏆 Ranking da Comunidade 🏆</h2>
+              </div>
+              <div id="ranking-body">
+                <ul id="ranking-list"></ul>
+              </div>
             </div>
           </div>
         </div>
